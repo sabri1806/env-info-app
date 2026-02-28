@@ -12,7 +12,7 @@ export default function Home() {
             Compare response data and latency between Next.js runtimes.
           </p>
           <p className="text-sm text-zinc-500 dark:text-zinc-400">
-            Entorno actual : {process.env.NODE_ENV}
+            Entorno actual : {''}
             <strong>{process.env.NEXT_PUBLIC_ENV_NAME}</strong>
           </p>
         </div>
