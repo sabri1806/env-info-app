@@ -9,9 +9,6 @@ export default function Home() {
             Next.js Runtime Comparison
           </h1>
           <p className="text-sm text-zinc-500 dark:text-zinc-400">
-            Compare response data and latency between Next.js runtimes.
-          </p>
-          <p className="text-sm text-zinc-500 dark:text-zinc-400">
             Entorno actual : {''}
             <strong>{process.env.NEXT_PUBLIC_ENV_NAME}</strong>
           </p>
