@@ -9,7 +9,7 @@ export default function Home() {
             Next.js Runtime Comparison
           </h1>
           <p className="text-sm text-zinc-500 dark:text-zinc-400">
-            Entorno actual : {''}
+            Current environment : {''}
             <strong>{process.env.NEXT_PUBLIC_ENV_NAME}</strong>
           </p>
         </div>
