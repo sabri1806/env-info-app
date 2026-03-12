@@ -73,7 +73,7 @@ function Card({
   children: React.ReactNode;
 }) {
   return (
-    <div className="flex-1 rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 p-6 flex flex-col gap-4 shadow-sm">
+    <div className="flex-1 rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-700 p-6 flex flex-col gap-4 shadow-sm">
       <div className="flex items-center justify-between">
         <h2 className="text-base font-semibold text-zinc-900 dark:text-zinc-100">{title}</h2>
         <Badge label={badge} color={badgeColor} />
@@ -150,7 +150,8 @@ export default function RuntimeComparison() {
       <button
         onClick={runComparison}
         disabled={loading}
-        className="self-start rounded-full bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900 px-5 py-2 text-sm font-semibold transition-opacity hover:opacity-80 disabled:opacity-50 disabled:cursor-not-allowed"
+        className="self-start rounded-full bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900 px-5 
+            py-2 text-sm font-semibold transition-opacity hover:opacity-80 disabled:opacity-50 disabled:cursor-not-allowed"
       >
         {loading ? 'Running...' : 'Run Comparison'}
       </button>
