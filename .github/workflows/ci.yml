@@ -43,8 +43,7 @@ jobs:
         uses: trufflesecurity/trufflehog@main
         with:
           path: ./
-          base: ${{ github.event.repository.default_branch }}
-          head: HEAD
+          extra_args: --only-verified
 
       # Validates that all third-party licenses are compliant
       # with the allowed list (MIT, Apache, ISC, BSD)
