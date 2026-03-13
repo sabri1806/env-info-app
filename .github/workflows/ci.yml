@@ -75,6 +75,7 @@ jobs:
 
       - name: Run ESLint
         run: npm run lint
+        working-directory: ${{ github.workspace }}
 
   # -------------------------------------------------------
   # 🧪 TEST JOB
