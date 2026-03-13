@@ -37,14 +37,8 @@ jobs:
         run: npm audit --audit-level=moderate
         continue-on-error: true
 
-      # Scans for secrets without specifying base/head
-      # letting TruffleHog auto-detect based on event type
-      - name: 🔐 Scan for secrets
-        uses: trufflesecurity/trufflehog@main
-        with:
-          path: ./
-          extra_args: --only-verified
-        continue-on-error: true
+      # ❌ Removed TruffleHog - requires complex git history setup
+      # TODO: Consider adding back when project grows
 
       # Validates that all third-party licenses are compliant
       - name: 📋 Check licenses
