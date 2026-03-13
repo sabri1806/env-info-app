@@ -51,13 +51,13 @@ npm run test:coverage # With coverage report
 
 Tests include:
 - **Component tests** – Snapshot & render tests for `ImageOptimizationComparison`
-- **API route tests** – Validates serverless and edge route responses
+- **Component tests** – Snapshot & render tests for `RuntimeComparison`
+- **API route tests** – Validates serverless route response
 
 ## 🔒 Security
 
 CI pipeline includes automated security checks on every push:
 - **`npm audit`** – Scans for vulnerable dependencies
-- **TruffleHog** – Detects leaked secrets or credentials
 - **License checker** – Validates third-party license compliance
 
 ## 📊 Analytics
@@ -84,7 +84,7 @@ GitHub Actions runs the following jobs on every push to `main` and on pull reque
 🔒 Security → 📝 Lint → 🧪 Tests → 🏗️ Build
 ```
 
-- **Security** – Dependency audit, secret scanning, license compliance
+- **Security** – Dependency audit & license compliance
 - **Lint** – ESLint code quality checks
 - **Tests** – Jest unit tests with coverage
 - **Build** – Next.js production build (only runs if all above pass)
