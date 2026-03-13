@@ -19,6 +19,7 @@ export default function ImageOptimizationComparision() {
                 <div className='bg-gray-100 rounded-xl p-6 shadow'>
                     <h2 className='text-xl font-semibold mb-4 text-gray-700 text-center'>Standard HTML Image </h2>
                     <div className='flex justify-center mb-4'>
+                         {/* eslint-disable-next-line @next/next/no-img-element */}
                         <img
                             src="mountains.jpg"
                             width={400}

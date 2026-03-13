@@ -36,6 +36,29 @@ Fetches two API endpoints in parallel and displays their response data and laten
 - **TypeScript**
 - **Tailwind CSS v4**
 - **Vercel** · Edge network + Analytics
+- **Jest** · Unit testing
+- **Testing Library** · Component testing
+
+## 🧪 Testing
+
+Minimal test suite focused on critical paths:
+
+```bash
+npm test              # Run all tests
+npm run test:watch    # Watch mode
+npm run test:coverage # With coverage report
+```
+
+Tests include:
+- **Component tests** – Snapshot & render tests for `ImageOptimizationComparison`
+- **API route tests** – Validates serverless and edge route responses
+
+## 🔒 Security
+
+CI pipeline includes automated security checks on every push:
+- **`npm audit`** – Scans for vulnerable dependencies
+- **TruffleHog** – Detects leaked secrets or credentials
+- **License checker** – Validates third-party license compliance
 
 ## 📊 Analytics
 
@@ -53,24 +76,26 @@ Then open [http://localhost:3000](http://localhost:3000).
 
 > **Note:** Geo headers (`country`, `region`, `city`) are only populated on Vercel deployments. Locally they will show `unknown`.
 
-## 🔁 CI
+## 🔁 CI Pipeline
 
-GitHub Actions runs lint + build on every push to `main` and on pull requests.
+GitHub Actions runs the following jobs on every push to `main` and on pull requests:
 
-The workflow file must live at `.github/workflows/ci.yml` because GitHub won't recognize it elsewhere and is configured with: 
-- Node 20
-- `npm ci` with dependency caching
-- Lint and build steps
+```
+🔒 Security → 📝 Lint → 🧪 Tests → 🏗️ Build
+```
+
+- **Security** – Dependency audit, secret scanning, license compliance
+- **Lint** – ESLint code quality checks
+- **Tests** – Jest unit tests with coverage
+- **Build** – Next.js production build (only runs if all above pass)
 
 ## Deploy on Vercel
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new)
 
-Check out the [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-
 ## 📝 Notes
 
-This project intentionally avoids additional complexity (Docker, external analytics, heavy backend logic) to stay focused on deployment concepts and infrastructure learning.
+This project intentionally avoids additional complexity to stay focused on deployment concepts and infrastructure learning.
 
 ## 🔗 Author
 
